@@ -1,0 +1,24 @@
+package titForTat;
+
+import java.awt.event.ActionEvent;
+import javax.swing.AbstractAction;
+
+public class DefectAction extends AbstractAction {
+	private static final long serialVersionUID = 8904835033875829026L;
+	public DefectAction() {
+		putValue(NAME, "Defect");
+	}
+	public void actionPerformed(ActionEvent e) {
+		if(TitForTat.repeat){
+			TitForTat.console.append("You Defected and have been awarded \n\t\t 5 points\n");
+			TitForTat.console.append("Opponent Cooperated and has been \n\t\t awarded 0 points\n");
+			TitForTat.scorePlayer =+ 5;
+			TitForTat.scoreComputer =+ 0;
+		} else {
+			TitForTat.console.append("You Defected and have been awarded 1 points\n");
+			TitForTat.console.append("Opponent Defected and has been awarded 1 points\n");
+			TitForTat.scorePlayer =+ 1;
+			TitForTat.scoreComputer =+ 1;
+		}
+	}
+}

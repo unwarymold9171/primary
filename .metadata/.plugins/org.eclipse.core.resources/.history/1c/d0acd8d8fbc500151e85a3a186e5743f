@@ -1,0 +1,137 @@
+package titForTat;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import javax.swing.*;
+import core.GuiBuild;
+
+public class TitForTat {
+	//JFrame build
+	private static GuiBuild tft = new GuiBuild("Tit-For-Tat", SystemColor.menu, 100, 100, 500, 325, false);
+	
+	//Text fields for the frame
+	private static JTextArea playerScore;
+	private static JTextArea computerScore;
+	private static JTextArea playerScoreText;
+	private static JTextArea computerScoreText;
+	private static JTextArea console;
+	//Buttons for the frame
+	private static JButton cooperate; 
+	private static JButton defect;
+	//Variables
+	private static boolean repeat = true;
+	private static int scorePlayer = 0;
+	private static int scoreComputer = 0;
+	//Action Listeners
+	private final static Action cooperateAction = new CooperateAction();
+	private final static Action defectAction = new DefectAction();
+	
+	//Assembly for the GUI
+	private static void titfortat(){
+		//System.out.println("\u300c" + "\u300d");
+		
+		//Player's Score Text Display Text
+		playerScoreText = new JTextArea();
+		playerScoreText.setBackground(tft.getGUIColor());
+		playerScoreText.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR)); //make it look nice
+		playerScoreText.setEditable(false);
+		playerScoreText.setText("Your Score:");
+		playerScoreText.setBounds(10, 10, 100, 20);
+		tft.addToContentPane(playerScoreText);
+		
+		//The Computer's Score Text Display Text
+		computerScoreText = new JTextArea();
+		computerScoreText.setBackground(tft.getGUIColor());
+		computerScoreText.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR)); //make it look nice
+		computerScoreText.setEditable(false);
+		computerScoreText.setText("Opponent's Score:");
+		computerScoreText.setBounds(110, 10, 100, 20);
+		tft.addToContentPane(computerScoreText);
+		
+		//The Player's score Display
+		playerScore = new JTextArea();
+		playerScore.setBackground(tft.getGUIColor());
+		playerScore.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR)); //make it look nice
+		playerScore.setEditable(false);
+		playerScore.setText("" + scorePlayer);
+		playerScore.setBounds(10, 30, 100, 20);
+		tft.addToContentPane(playerScore);
+		
+		//The Computers score Display
+		computerScore = new JTextArea();
+		computerScore.setBackground(tft.getGUIColor());
+		computerScore.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR)); //make it look nice
+		computerScore.setEditable(false);
+		computerScore.setText("" + scoreComputer);
+		computerScore.setBounds(110, 30, 100, 20);
+		tft.addToContentPane(computerScore);
+		
+		//Console Display
+		console = new JTextArea();
+		console.setBackground(Color.white);//tft.getGUIColor()
+		console.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR)); //make it look nice
+		console.setEditable(false);
+		console.setText("");
+		console.setBounds(225, 10, 250, 200);
+		tft.addToContentPane(console);
+		
+		//Cooperate Button
+		cooperate = new JButton("Cooperate"); 
+		cooperate.setBounds(20, 220, 200, 50);
+		cooperate.setAction(cooperateAction);
+		tft.addToContentPane(cooperate);
+		
+		//Defect Button
+		defect = new JButton("Defect");
+		defect.setBounds(270, 220, 200, 50);
+		defect.setAction(defectAction);
+		tft.addToContentPane(defect);
+	}
+	
+	public static void main(String[] args){
+		titfortat();
+		
+		tft.setVisible(true);
+	}
+	
+	//action listener cooperation
+	private class CooperateAction extends AbstractAction {
+		public CooperateAction() {
+			
+		}
+		public void actionPerformed(ActionEvent e) {
+			if(repeat){
+				console.append("You Cooperated and have been awarded 3 points\n");
+				console.append("Opponent Cooperated and has been awarded 3 points\n");
+				scorePlayer =+ 3;
+				scoreComputer =+ 3;
+			} else {
+				console.append("You Cooperated and have been awarded 0 points\n");
+				console.append("Opponent Defected and has been awarded 5 points\n");
+				scorePlayer =+ 0;
+				scoreComputer =+ 5;
+			}
+		}
+	}
+	
+	//action listener defect
+	private class DefectAction extends AbstractAction {
+		public DefectAction() {
+			
+		}
+		public void actionPerformed(ActionEvent e) {
+			if(repeat){
+				console.append("You Defected and have been awarded 5 points\n");
+				console.append("Opponent Cooperated and has been awarded 0 points\n");
+				scorePlayer =+ 5;
+				scoreComputer =+ 0;
+			} else {
+				console.append("You Defected and have been awarded 1 points\n");
+				console.append("Opponent Defected and has been awarded 1 points\n");
+				scorePlayer =+ 1;
+				scoreComputer =+ 1;
+			}
+		}
+	}
+
+}

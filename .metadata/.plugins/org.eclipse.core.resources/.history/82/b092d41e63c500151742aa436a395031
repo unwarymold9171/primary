@@ -1,0 +1,65 @@
+package core;
+
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+
+public class guiBuild extends JFrame{
+	private static final long serialVersionUID = -6695122079269918161L;
+
+	private JPanel contentPane;
+	
+	// My favorite
+	public guiBuild(String name, Color colour, int xPos, int yPos, int width, int height, boolean resizeable){
+		setTitle(name);
+		setBackground(colour);
+		setBounds(xPos, yPos, width, height);
+		setResizable(resizeable);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		contentPane = new JPanel();
+		contentPane.setBackground(colour);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+	}
+	
+	public guiBuild(String name, Color colour, int width, int height, boolean resizeable){
+		setTitle(name);
+		setBackground(colour);
+		setSize(width, height);
+		setResizable(resizeable);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		contentPane = new JPanel();
+		contentPane.setBackground(colour);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+	}
+
+	public guiBuild(String name, Color colour, LayoutManager manager, int xPos, int yPos, int width, int height, boolean resizeable){
+		setTitle(name);
+		setBackground(colour);
+		setBounds(xPos, yPos, width, height);
+		setResizable(resizeable);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		contentPane = new JPanel();
+		contentPane.setBackground(colour);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(manager);
+	}
+	
+	public guiBuild(String name, Color colour, LayoutManager manager, int width, int height, boolean resizeable){
+		setTitle(name);
+		setBackground(colour);
+		setSize(width, height);
+		setResizable(resizeable);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		contentPane = new JPanel();
+		contentPane.setBackground(colour);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(manager);
+	}
+	
+}

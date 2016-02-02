@@ -1,0 +1,34 @@
+package english.random.actions;
+
+import java.awt.event.ActionEvent;
+import javax.swing.AbstractAction;
+
+import core.MathFuctions;
+import english.random.Random;
+
+public class CooperateAction extends AbstractAction{
+	private static final long serialVersionUID = 2619586580438014477L;
+	public CooperateAction() {
+		putValue(NAME, "Cooperate");
+	}
+	public void actionPerformed(ActionEvent e) {
+		Random.console.setText("");
+		if(Random.cooperation){
+			Random.console.append("You Cooperated and have been awarded \n 3 points\n");
+			Random.console.append("Opponent Cooperated and has been \n awarded 3 points\n");
+			Random.scorePlayer += 3;
+			Random.scoreComputer += 3;
+		} else {
+			Random.console.append("You Cooperated and have been awarded \n 0 points\n");
+			Random.console.append("Opponent Defected and has been \n awarded 5 points\n");
+			Random.scorePlayer += 0;
+			Random.scoreComputer += 5;
+		}
+		
+		if(MathFuctions.randomInt(0, 2) > 1)
+			Random.cooperation = true;
+		
+		Random.playerScore.setText("" + Random.scorePlayer);
+		Random.computerScore.setText("" + Random.scoreComputer);
+	}
+}

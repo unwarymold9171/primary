@@ -1,0 +1,35 @@
+package core;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class guiBuild extends JFrame{
+	private static final long serialVersionUID = -6695122079269918161L;
+
+	// My favorite
+	public guiBuild(String name, Color colour, int xPos, int yPos,int width, int height, boolean resizeable){
+		setTitle(name);
+		setBackground(colour);
+		setBounds(xPos, yPos, width, height);
+		setResizable(resizeable);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	public guiBuild(String name, Color colour, int width, int height, boolean resizeable){
+		guiBuild(name, colour, 0, 0 width, height, resizeable);
+	}
+
+	public guiBuild(String name, Color colour, LayoutManager manager,int xPos, int yPos, int width, int height, boolean resizeable){
+		setTitle(name);
+		setBackground(colour);
+		setLayout(manager);
+		setBounds(xPos, yPos, width, height);
+		setResizable(resizeable);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	public guiBuild(String name, Color colour, LayoutManager manager, int width, int height, boolean resizeable){
+		guiBuild(name, colour, manager, 0, 0 width, height, resizeable);
+	}
+	
+}

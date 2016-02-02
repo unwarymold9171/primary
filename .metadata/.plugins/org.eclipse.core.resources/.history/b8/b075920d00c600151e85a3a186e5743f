@@ -1,0 +1,23 @@
+package titForTat;
+
+import java.awt.event.ActionEvent;
+import javax.swing.AbstractAction;
+
+public class CooperateAction extends AbstractAction{
+	public CooperateAction() {
+		putValue(NAME, "Cooperate");
+	}
+	public void actionPerformed(ActionEvent e) {
+		if(TitForTat.repeat){
+			console.append("You Cooperated and have been awarded 3 points\n");
+			console.append("Opponent Cooperated and has been awarded 3 points\n");
+			scorePlayer =+ 3;
+			scoreComputer =+ 3;
+		} else {
+			console.append("You Cooperated and have been awarded 0 points\n");
+			console.append("Opponent Defected and has been awarded 5 points\n");
+			scorePlayer =+ 0;
+			scoreComputer =+ 5;
+		}
+	}
+}

@@ -1,0 +1,21 @@
+package core;
+
+public class MathFuctions {
+
+	public static int randomInt(int minimun, int maximum){
+		return (int)(Math.random() * (maximum-minimun));
+	}
+	
+	public static double randomDouble(double minimun, double maximum){
+		return Math.random() * (maximum-minimun);
+	}
+	
+	public static double roundTo(double input, double pointsAfterDecimal){
+		return ((int)(input * Math.pow(10, pointsAfterDecimal) + .5)) / (Math.pow(10, pointsAfterDecimal));
+	}
+	
+	public static double roundMoney(double input) {
+		return roundTo(input, 2);
+	}
+	
+}

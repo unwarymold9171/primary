@@ -1,0 +1,16 @@
+package core;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class guiBuild extends JFrame{
+	public guiBuild(String name, Color colour, LayoutManager manager, int width, int height){
+		final JFrame gui = new JFrame(name);
+		gui.setBackground(colour);
+		gui.setLayout(manager);
+		gui.setSize(width, height);
+		
+		gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	}
+}

@@ -1,0 +1,33 @@
+package english.random.actions;
+
+import java.awt.event.ActionEvent;
+import javax.swing.AbstractAction;
+
+import core.MathFuctions;
+import english.random.Random;
+
+public class DefectAction extends AbstractAction {
+	private static final long serialVersionUID = 8904835033875829026L;
+	public DefectAction() {
+		putValue(NAME, "Defect");
+	}
+	public void actionPerformed(ActionEvent e) {
+		Random.console.setText("");
+		if(Random.cooperation){
+			Random.console.append("You Defected and have been awarded \n 5 points\n");
+			Random.console.append("Opponent Cooperated and has been \n awarded 0 points\n");
+			Random.scorePlayer += 5;
+			Random.scoreComputer += 0;
+		} else {
+			Random.console.append("You Defected and have been awarded \n 1 points\n");
+			Random.console.append("Opponent Defected and has been \n awarded 1 points\n");
+			Random.scorePlayer += 1;
+			Random.scoreComputer += 1;
+		}
+		if(MathFuctions.randomDouble(0, 1) > 0)
+			Random.cooperation = true;
+		
+		Random.playerScore.setText("" + Random.scorePlayer);
+		Random.computerScore.setText("" + Random.scoreComputer);
+	}
+}

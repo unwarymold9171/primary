@@ -1,0 +1,23 @@
+package english;
+
+import java.awt.SystemColor;
+import javax.swing.Action;
+import javax.swing.JButton;
+import javax.swing.JTextArea;
+import core.GuiBuild;
+import english.action.*;
+
+public class EnglishGUI {
+	//GUI initial set up
+	private static GuiBuild uiMain = new GuiBuild("English 12 MultiGenenera Project", SystemColor.menu, 100, 100, 500, 325, false);
+	//Text Areas
+	private static JTextArea intorductionText;
+	//Buttons for the frame
+	private static JButton randomExicute; 
+	private static JButton titFotTatExicute;
+	//Action Listeners
+	private final static Action exicuteRandom = new ExicuteRandom();
+	private final static Action exicuteTitForTat = new ExicuteTitForTat();
+	//build
+	
+}

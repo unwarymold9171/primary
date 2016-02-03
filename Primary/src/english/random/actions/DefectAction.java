@@ -2,7 +2,6 @@ package english.random.actions;
 
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
-
 import core.MathFuctions;
 import english.random.Random;
 

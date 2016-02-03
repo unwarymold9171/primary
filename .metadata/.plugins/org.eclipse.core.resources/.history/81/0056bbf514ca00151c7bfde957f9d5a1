@@ -1,0 +1,8 @@
+package english;
+
+import java.awt.SystemColor;
+import core.GuiBuild;
+
+public class EnglishGUI {
+	private static GuiBuild uiMain = new GuiBuild("English 12 MultiGenenera Project", SystemColor.menu, 100, 100, 500, 325, false);
+}

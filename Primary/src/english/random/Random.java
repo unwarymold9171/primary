@@ -2,12 +2,12 @@ package english.random;
 
 import java.awt.*;
 import javax.swing.*;
-import core.*;
+import core.GuiBuild;
 import english.random.actions.*;
 
 public class Random {
 	//JFrame build
-	private static GuiBuild uiRandom = new GuiBuild("Random", SystemColor.menu, 100, 100, 500, 325, false);
+	public static GuiBuild uiRandom = new GuiBuild("Random", SystemColor.menu, 100, 100, 500, 325, false);
 	
 	//Text fields for the frame
 	private static JTextArea intorductionText;
@@ -28,7 +28,7 @@ public class Random {
 	private final static Action defectAction = new DefectAction();
 	
 	//Assembly for the GUI
-	private static void randomUI(){
+	public static void randomUI(){
 		//System.out.println("\u300c" + "\u300d");
 		
 		//Introduction Text Field
@@ -96,11 +96,6 @@ public class Random {
 		defect.setBounds(270, 220, 200, 50);
 		defect.setAction(defectAction);
 		uiRandom.addToContentPane(defect);
-	}
-	
-	public static void main(String[] args){
-		randomUI();
-		uiRandom.setVisible(true);
 	}
 	
 }

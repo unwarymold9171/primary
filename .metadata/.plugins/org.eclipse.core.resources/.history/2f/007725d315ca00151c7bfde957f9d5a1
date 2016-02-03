@@ -1,0 +1,15 @@
+package english.action;
+
+import java.awt.event.ActionEvent;
+import javax.swing.AbstractAction;
+import english.random.Random;
+
+public class ExicuteRandom {
+	private static final long serialVersionUID = 2619586580438014477L;
+	public ExicuteRandom() {
+		putValue(NAME, "Cooperate");
+	}
+	public void actionPerformed(ActionEvent e) {
+		Random.randomUI();
+	}
+}

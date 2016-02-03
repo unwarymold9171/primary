@@ -7,7 +7,7 @@ import english.titForTat.actions.*;
 
 public class TitForTat {
 	//JFrame build
-	private static GuiBuild tft = new GuiBuild("Tit-For-Tat", SystemColor.menu, 100, 100, 500, 325, false);
+	public static GuiBuild tft = new GuiBuild("Tit-For-Tat", SystemColor.menu, 100, 100, 500, 325, false);
 	
 	//Text fields for the frame
 	private static JTextArea intorductionText;
@@ -28,7 +28,7 @@ public class TitForTat {
 	private final static Action defectAction = new DefectAction();
 	
 	//Assembly for the GUI
-	private static void titfortat(){
+	public static void titfortat(){
 		//System.out.println("\u300c" + "\u300d");
 		
 		//Introduction Text Field
@@ -96,10 +96,5 @@ public class TitForTat {
 		defect.setBounds(270, 220, 200, 50);
 		defect.setAction(defectAction);
 		tft.addToContentPane(defect);
-	}
-	
-	public static void main(String[] args){
-		titfortat();
-		tft.setVisible(true);
 	}
 }

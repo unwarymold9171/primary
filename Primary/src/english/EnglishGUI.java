@@ -16,9 +16,11 @@ public class EnglishGUI {
 	//Buttons for the frame
 	private static JButton randomExicute; 
 	private static JButton titFotTatExicute;
+	private static JButton betrailExicute;
 	//Action Listeners
 	private final static Action exicuteRandom = new ExicuteRandom();
 	private final static Action exicuteTitForTat = new ExicuteTitForTat();
+	private final static Action exicuteBetrail = new ExicuteBetrail();
 	
 	//build
 	private static void uiMain(){

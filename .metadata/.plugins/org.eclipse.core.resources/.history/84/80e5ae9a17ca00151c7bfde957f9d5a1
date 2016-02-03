@@ -7,7 +7,7 @@ import english.random.Random;
 public class ExicuteRandom extends AbstractAction{
 	private static final long serialVersionUID = 2619586580438014477L;
 	public ExicuteRandom() {
-		putValue(NAME, "Random Selection");
+		putValue(NAME, "Cooperate");
 	}
 	public void actionPerformed(ActionEvent e) {
 		Random.randomUI();

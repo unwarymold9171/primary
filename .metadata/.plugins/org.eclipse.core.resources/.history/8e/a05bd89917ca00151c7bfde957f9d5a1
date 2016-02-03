@@ -2,15 +2,15 @@ package english.action;
 
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
-import english.random.Random;
+import english.titForTat.TitForTat;
 
-public class ExicuteRandom extends AbstractAction{
+public class ExicuteTitForTat extends AbstractAction{
 	private static final long serialVersionUID = 2619586580438014477L;
-	public ExicuteRandom() {
-		putValue(NAME, "Random Selection");
+	public ExicuteTitForTat() {
+		putValue(NAME, "Cooperate");
 	}
 	public void actionPerformed(ActionEvent e) {
-		Random.randomUI();
-		Random.uiRandom.setVisible(true);
+		TitForTat.titfortat();
+		TitForTat.tft.setVisible(true);
 	}
 }

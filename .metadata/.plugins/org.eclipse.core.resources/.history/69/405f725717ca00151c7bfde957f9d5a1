@@ -26,19 +26,9 @@ public class EnglishGUI {
 		intorductionText.setBackground(uiMain.getGUIColor());
 		intorductionText.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR)); //make it look nice
 		intorductionText.setEditable(false);
-		intorductionText.setText("Click on which type of Prisoner's Dilemma you would like to try out.");
+		intorductionText.setText("Click on which type of Prisoner's Dilemma you would like to try out");
 		intorductionText.setBounds(10, 10, 480, 30);
 		uiMain.addToContentPane(intorductionText);
-		
-		randomExicute = new JButton("Random Selection"); 
-		randomExicute.setBounds(10, 50, 200, 20);
-		randomExicute.setAction(exicuteRandom);
-		uiMain.addToContentPane(randomExicute);
-		
-		titFotTatExicute = new JButton("Random Selection"); 
-		titFotTatExicute.setBounds(10, 70, 200, 20);
-		titFotTatExicute.setAction(exicuteTitForTat);
-		uiMain.addToContentPane(titFotTatExicute);
 	}
 	
 	public static void main(String[] args){

@@ -7,7 +7,7 @@ import english.titForTat.TitForTat;
 public class ExicuteTitForTat extends AbstractAction{
 	private static final long serialVersionUID = 2619586580438014477L;
 	public ExicuteTitForTat() {
-		putValue(NAME, "Cooperate");
+		putValue(NAME, "Tit-For-Tat");
 	}
 	public void actionPerformed(ActionEvent e) {
 		TitForTat.titfortat();

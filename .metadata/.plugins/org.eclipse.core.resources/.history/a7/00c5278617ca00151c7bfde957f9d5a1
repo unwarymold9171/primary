@@ -30,15 +30,10 @@ public class EnglishGUI {
 		intorductionText.setBounds(10, 10, 480, 30);
 		uiMain.addToContentPane(intorductionText);
 		
-		randomExicute = new JButton("Random Selection"); 
-		randomExicute.setBounds(10, 50, 200, 20);
+		randomExicute = new JButton("Cooperate"); 
+		randomExicute.setBounds(20, 220, 200, 50);
 		randomExicute.setAction(exicuteRandom);
 		uiMain.addToContentPane(randomExicute);
-		
-		titFotTatExicute = new JButton("Random Selection"); 
-		titFotTatExicute.setBounds(10, 70, 200, 20);
-		titFotTatExicute.setAction(exicuteTitForTat);
-		uiMain.addToContentPane(titFotTatExicute);
 	}
 	
 	public static void main(String[] args){

@@ -36,7 +36,7 @@ public class EnglishGUI {
 		uiMain.addToContentPane(randomExicute);
 		
 		titFotTatExicute = new JButton("Random Selection"); 
-		titFotTatExicute.setBounds(10, 70, 200, 20);
+		titFotTatExicute.setBounds(10, 50, 200, 20);
 		titFotTatExicute.setAction(exicuteTitForTat);
 		uiMain.addToContentPane(titFotTatExicute);
 	}

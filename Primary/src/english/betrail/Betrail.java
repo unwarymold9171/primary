@@ -12,7 +12,7 @@ import english.betrail.actions.DefectAction;
 
 public class Betrail {
 	//JFrame build
-	public static GuiBuild uiBetrail = new GuiBuild("Random", SystemColor.menu, 100, 100, 500, 325, false);
+	public static GuiBuild uiBetrail = new GuiBuild("Always Breraying", SystemColor.menu, 100, 100, 500, 325, false, false);
 	
 	//Text fields for the frame
 	private static JTextArea intorductionText;

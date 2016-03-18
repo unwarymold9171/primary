@@ -7,7 +7,7 @@ import english.random.actions.*;
 
 public class Random {
 	//JFrame build
-	public static GuiBuild uiRandom = new GuiBuild("Random", SystemColor.menu, 100, 100, 500, 325, false);
+	public static GuiBuild uiRandom = new GuiBuild("Random", SystemColor.menu, 100, 100, 500, 325, false, false);
 	
 	//Text fields for the frame
 	private static JTextArea intorductionText;

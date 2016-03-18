@@ -7,7 +7,7 @@ import english.titForTat.actions.*;
 
 public class TitForTat {
 	//JFrame build
-	public static GuiBuild tft = new GuiBuild("Tit-For-Tat", SystemColor.menu, 100, 100, 500, 325, false);
+	public static GuiBuild tft = new GuiBuild("Tit-For-Tat", SystemColor.menu, 100, 100, 500, 325, false, false);
 	
 	//Text fields for the frame
 	private static JTextArea intorductionText;

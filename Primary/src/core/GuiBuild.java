@@ -13,12 +13,15 @@ public class GuiBuild extends JFrame{
 	//   *   *   *   Constructors   *   *   *   //
 	
 	// My favorite
-	public GuiBuild(String name, Color colour, int xPos, int yPos, int width, int height, boolean resizeable){
+	public GuiBuild(String name, Color colour, int xPos, int yPos, int width, int height, boolean resizeable, boolean exitOnClose){
 		setTitle(name);
 		setBackground(colour);
 		setBounds(xPos, yPos, width, height);
 		setResizable(resizeable);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		if(exitOnClose)
+			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		else
+			setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		contentPane = new JPanel();
 		contentPane.setBackground(colour);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -27,12 +30,15 @@ public class GuiBuild extends JFrame{
 		color = colour;
 	}
 	
-	public GuiBuild(String name, Color colour, int width, int height, boolean resizeable){
+	public GuiBuild(String name, Color colour, int width, int height, boolean resizeable, boolean exitOnClose){
 		setTitle(name);
 		setBackground(colour);
 		setSize(width, height);
 		setResizable(resizeable);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		if(exitOnClose)
+			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		else
+			setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		contentPane = new JPanel();
 		contentPane.setBackground(colour);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -41,12 +47,15 @@ public class GuiBuild extends JFrame{
 		color = colour;
 	}
 
-	public GuiBuild(String name, Color colour, LayoutManager manager, int xPos, int yPos, int width, int height, boolean resizeable){
+	public GuiBuild(String name, Color colour, LayoutManager manager, int xPos, int yPos, int width, int height, boolean resizeable, boolean exitOnClose){
 		setTitle(name);
 		setBackground(colour);
 		setBounds(xPos, yPos, width, height);
 		setResizable(resizeable);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		if(exitOnClose)
+			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		else
+			setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		contentPane = new JPanel();
 		contentPane.setBackground(colour);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -55,12 +64,15 @@ public class GuiBuild extends JFrame{
 		color = colour;
 	}
 	
-	public GuiBuild(String name, Color colour, LayoutManager manager, int width, int height, boolean resizeable){
+	public GuiBuild(String name, Color colour, LayoutManager manager, int width, int height, boolean resizeable, boolean exitOnClose){
 		setTitle(name);
 		setBackground(colour);
 		setSize(width, height);
 		setResizable(resizeable);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		if(exitOnClose)
+			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		else
+			setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		contentPane = new JPanel();
 		contentPane.setBackground(colour);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

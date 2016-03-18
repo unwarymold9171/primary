@@ -7,7 +7,7 @@ import english.betrail.Betrail;
 public class ExicuteBetrail extends AbstractAction{
 	private static final long serialVersionUID = 2619586580438014477L;
 	public ExicuteBetrail() {
-		putValue(NAME, "Random Selection");
+		putValue(NAME, "Always Breraying");
 	}
 	public void actionPerformed(ActionEvent e) {
 		Betrail.betrailUI();

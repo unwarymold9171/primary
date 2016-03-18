@@ -2,17 +2,21 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Betrail" key="selection"/>
+		<item value="uiCooperation" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="uiBetrail"/>
+			<item value="Betrail"/>
 			<item value="Random"/>
 			<item value="uiRandom"/>
 			<item value="at"/>
 		</list>
 		<list key="replacehistory">
+			<item value="uiCooperation"/>
+			<item value="Cooperation"/>
 			<item value="Betrail"/>
 			<item value="uiBetrail"/>
 		</list>

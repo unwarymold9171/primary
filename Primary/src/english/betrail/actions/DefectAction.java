@@ -11,7 +11,7 @@ public class DefectAction extends AbstractAction {
 	}
 	public void actionPerformed(ActionEvent e) {
 		Betrail.console.setText("");
-		if(Betrail.cooperation){
+		if(!Betrail.cooperation){
 			Betrail.console.append("You Defected and have been awarded \n 5 points\n");
 			Betrail.console.append("Opponent Cooperated and has been \n awarded 0 points\n");
 			Betrail.scorePlayer += 5;

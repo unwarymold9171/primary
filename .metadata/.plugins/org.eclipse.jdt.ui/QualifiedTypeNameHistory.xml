@@ -7,4 +7,5 @@
 <fullyQualifiedTypeName name="javax.swing.AbstractAction"/>
 <fullyQualifiedTypeName name="core.GuiBuild"/>
 <fullyQualifiedTypeName name="english.action.ExicuteRandom"/>
+<fullyQualifiedTypeName name="english.cooperation.Cooperation"/>
 </qualifiedTypeNameHistroy>

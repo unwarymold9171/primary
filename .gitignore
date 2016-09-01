@@ -14,3 +14,5 @@
 .metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.nrm
 *.tis
 .metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
+*.ini
+.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
